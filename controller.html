@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eventApp">
+<head>
+<title>Controller</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="container">
+				<h2>This is a header</h2>
+			</div>
+		</header>
+		<div class="container">			
+			<div class="text-area" ng-controller="EventController">
+				<p>Framwork: {{event.name}}</p><br>
+				<p>Date: {{event.date}}</p><br>
+				<p>Place: {{event.place}}</p><br>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="container">
+				<p>footer section</p>
+			</div>
+		</footer>
+	</div>
+</body>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers/eventController.js"></script>
+</html>

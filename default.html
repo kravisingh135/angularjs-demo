@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.js"></script>
+<script type="text/javascript" src="js/route.js"></script>
+</head>
+<body ng-app="myApp">
+	<div class="wrapper">
+		<header>
+			<div class="container clearfix">
+				<a href="default.html#/" class="home"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+				<nav ng-controller="MenuController">
+					<ul>
+						<!--<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{menuitems.menu1}} </a></li>						
+						<li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> {{menuitems.menu1}} </a></li>
+						<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> {{menuitems.menu1}}</a></li>-->
+
+						<li data-ng-repeat="printnav in newnav"><a href="#">{{printnav.menu}}</a></li>
+
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="container">
+			<nav class="left-nav" ng-controller="MenuController">
+				<ul>
+					<li><a href="#web-applications"><i class="fa fa-safari" aria-hidden="true"></i> {{leftnav.lnmenu1}} </a></li>
+					<li><a href="#big-data"><i class="fa fa-database" aria-hidden="true"></i> {{leftnav.lnmenu2}} </a></li>
+					<li><a href="#business-apps"><i class="fa fa-bullhorn" aria-hidden="true"></i> {{leftnav.lnmenu3}} </a></li>
+				</ul>
+			</nav>
+			<div class="text-area" ng-view></div>
+			<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="container">
+				<p>&copy; All Right Reserved.</p>
+			</div>
+		</footer>
+	</div>
+</body>
+<script type="text/javascript" src="js/controllers/top-menu.js"></script>
+</html>
